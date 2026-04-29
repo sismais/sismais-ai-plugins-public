@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 function readJson(filePath) {
   try {
@@ -51,11 +52,11 @@ export function validate(repoRoot) {
   }
 
   // 2. Required fields
-  for (const field of ['name', 'owner', 'plugins']) {
+  for (const field of ['name', 'owner']) {
     if (!(field in mp)) push(`marketplace.json: campo "${field}" obrigatório`);
   }
   if (!Array.isArray(mp.plugins)) {
-    push('marketplace.json: "plugins" deve ser array');
+    push('marketplace.json: campo "plugins" obrigatório e deve ser array');
     return { ok: false, errors };
   }
 
@@ -64,7 +65,10 @@ export function validate(repoRoot) {
     for (const f of ['name', 'source', 'version', 'description']) {
       if (!(f in p)) push(`marketplace.json plugin: campo "${f}" obrigatório (entrada: ${JSON.stringify(p)})`);
     }
-    if (!p.source) continue;
+    if (typeof p.source !== 'string' || p.source.trim() === '') {
+      push(`marketplace.json plugin "${p.name ?? '?'}": campo "source" deve ser string não vazia`);
+      continue;
+    }
     const pluginDir = path.join(repoRoot, p.source);
     if (!existsSync(pluginDir)) {
       push(`marketplace.json: source "${p.source}" aponta para pasta inexistente`);
@@ -77,11 +81,11 @@ export function validate(repoRoot) {
     }
     const pj = readJson(pluginJsonPath);
     if (pj.__error) { push(pj.__error); continue; }
-    if (pj.name !== p.name) {
-      push(`${p.source}: plugin.json.name "${pj.name}" != marketplace name "${p.name}"`);
-    }
     for (const f of ['name', 'version']) {
       if (!(f in pj)) push(`${p.source}/.claude-plugin/plugin.json: campo "${f}" obrigatório`);
+    }
+    if ('name' in pj && pj.name !== p.name) {
+      push(`${p.source}: plugin.json.name "${pj.name}" != marketplace name "${p.name}"`);
     }
 
     // 4. Skills frontmatter
@@ -116,8 +120,7 @@ export function validate(repoRoot) {
 }
 
 // CLI
-if (import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}` ||
-    process.argv[1].endsWith('validate.mjs')) {
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   const root = process.argv[2] || process.cwd();
   const result = validate(root);
   if (result.ok) {
