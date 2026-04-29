@@ -1,0 +1,21 @@
+# Garante line endings consistentes
+*.md text eol=lf
+*.json text eol=lf
+*.mjs text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.py text eol=lf
+
+# Binários
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.gz binary
+
+# Schemas XSD são texto, mas mantém eol=lf
+*.xsd text eol=lf
+*.xml text eol=lf
