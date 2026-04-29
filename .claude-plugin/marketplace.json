@@ -16,6 +16,14 @@
       "version": "0.1.0",
       "category": "example",
       "tags": ["example", "template"]
+    },
+    {
+      "name": "consultor-fiscal-sismais",
+      "source": "./plugins/consultor-fiscal-sismais",
+      "description": "Consultor fiscal especialista em NF-e, NFC-e, NFS-e e tributação brasileira",
+      "version": "0.1.0",
+      "category": "fiscal",
+      "tags": ["fiscal", "tributario", "nfe", "nfce", "nfse", "sefaz", "brasil"]
     }
   ]
 }
