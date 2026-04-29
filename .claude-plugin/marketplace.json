@@ -1,0 +1,21 @@
+{
+  "name": "sismais",
+  "owner": {
+    "name": "Sismais",
+    "url": "https://github.com/sismais"
+  },
+  "metadata": {
+    "description": "Marketplace público de plugins de IA da Sismais",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "hello-sismais",
+      "source": "./plugins/hello-sismais",
+      "description": "Plugin de exemplo — valida instalação e serve de template",
+      "version": "0.1.0",
+      "category": "example",
+      "tags": ["example", "template"]
+    }
+  ]
+}

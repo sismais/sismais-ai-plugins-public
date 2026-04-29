@@ -1,0 +1,6 @@
+{
+  "name": "hello-sismais",
+  "version": "0.1.0",
+  "description": "Plugin de exemplo da Sismais — valida instalação",
+  "author": { "name": "Sismais" }
+}
