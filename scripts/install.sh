@@ -8,7 +8,7 @@ set -euo pipefail
 
 MARKETPLACE_NAME="sismais"
 MARKETPLACE_REPO="sismais/sismais-ai-plugins"
-SETTINGS_FILE="${HOME}/.claude/settings.json"
+export SETTINGS_FILE="${HOME}/.claude/settings.json"
 
 c_green=$'\033[0;32m'
 c_red=$'\033[0;31m'
@@ -72,6 +72,9 @@ cfg.extraKnownMarketplaces ??= {};
 const desired = { source: { source: 'github', repo: '${MARKETPLACE_REPO}' } };
 const existing = cfg.extraKnownMarketplaces['${MARKETPLACE_NAME}'];
 
+if (existing !== undefined && JSON.stringify(existing) !== JSON.stringify(desired)) {
+  console.error('AVISO: o marketplace sismais já existe com configuração diferente da padrão. Substituindo pela configuração canônica.');
+}
 if (JSON.stringify(existing) !== JSON.stringify(desired)) {
   cfg.extraKnownMarketplaces['${MARKETPLACE_NAME}'] = desired;
 }
@@ -119,9 +122,7 @@ try {
 cfg.enabledPlugins ??= {};
 cfg.enabledPlugins['hello-sismais@${MARKETPLACE_NAME}'] = true;
 
-if ('${ENABLE_FISCAL}' === 'yes') {
-  cfg.enabledPlugins['consultor-fiscal-sismais@${MARKETPLACE_NAME}'] = true;
-}
+cfg.enabledPlugins['consultor-fiscal-sismais@${MARKETPLACE_NAME}'] = ('${ENABLE_FISCAL}' === 'yes');
 
 writeFileSync(path, JSON.stringify(cfg, null, 2) + '\n');
 EOF
