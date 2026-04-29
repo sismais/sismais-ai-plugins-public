@@ -114,8 +114,9 @@ if (-not $cfg.ContainsKey('enabledPlugins')) {
 $cfg['enabledPlugins']["hello-sismais@$MarketplaceName"] = $true
 $cfg['enabledPlugins']["consultor-fiscal-sismais@$MarketplaceName"] = $enableFiscal
 
-# 9. Escrever de volta
-$cfg | ConvertTo-Json -Depth 10 | Set-Content -Path $SettingsFile -Encoding UTF8
+# 9. Escrever de volta (com newline final, alinhado com install.sh)
+$json = ($cfg | ConvertTo-Json -Depth 10) + "`n"
+[System.IO.File]::WriteAllText($SettingsFile, $json, [System.Text.UTF8Encoding]::new($false))
 
 if ($enableFiscal) {
     Write-Ok "Plugins habilitados: hello-sismais, consultor-fiscal-sismais"
