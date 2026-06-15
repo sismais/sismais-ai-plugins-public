@@ -2,12 +2,12 @@
 # Onboarding do marketplace público Sismais para Claude Code (Linux/Mac).
 #
 # Uso:
-#   curl -fsSL https://raw.githubusercontent.com/sismais/sismais-ai-plugins/main/scripts/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/sismais/sismais-ai-plugins-public/main/scripts/install.sh | bash
 
 set -euo pipefail
 
 MARKETPLACE_NAME="sismais"
-MARKETPLACE_REPO="sismais/sismais-ai-plugins"
+MARKETPLACE_REPO="sismais/sismais-ai-plugins-public"
 export SETTINGS_FILE="${HOME}/.claude/settings.json"
 
 c_green=$'\033[0;32m'
@@ -89,7 +89,7 @@ echo
 if [[ "${is_internal,,}" =~ ^(s|y|sim|yes)$ ]]; then
   warn "O marketplace interno ainda não está disponível publicamente."
   warn "Quando estiver, rode novamente este script ou siga as instruções em:"
-  warn "  https://github.com/sismais/sismais-ai-plugins#interno"
+  warn "  https://github.com/sismais/sismais-ai-plugins-public#interno"
 fi
 
 # 7. Plugins disponíveis e pergunta sobre consultor-fiscal-sismais

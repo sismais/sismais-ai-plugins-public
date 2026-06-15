@@ -1,12 +1,12 @@
 # Onboarding do marketplace público Sismais para Claude Code (Windows).
 #
 # Uso:
-#   iwr -useb https://raw.githubusercontent.com/sismais/sismais-ai-plugins/main/scripts/install.ps1 | iex
+#   iwr -useb https://raw.githubusercontent.com/sismais/sismais-ai-plugins-public/main/scripts/install.ps1 | iex
 
 $ErrorActionPreference = 'Stop'
 
 $MarketplaceName = 'sismais'
-$MarketplaceRepo = 'sismais/sismais-ai-plugins'
+$MarketplaceRepo = 'sismais/sismais-ai-plugins-public'
 $SettingsFile    = Join-Path $HOME '.claude/settings.json'
 
 function Write-Ok($msg)   { Write-Host "✔ $msg" -ForegroundColor Green }
@@ -93,7 +93,7 @@ Write-Host ""
 if ($isInternal -match '^(s|y|sim|yes)$') {
     Write-Warn "O marketplace interno ainda não está disponível publicamente."
     Write-Warn "Quando estiver, rode novamente este script ou siga as instruções em:"
-    Write-Warn "  https://github.com/sismais/sismais-ai-plugins#interno"
+    Write-Warn "  https://github.com/sismais/sismais-ai-plugins-public#interno"
 }
 
 # 7. Plugins

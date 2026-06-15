@@ -64,7 +64,7 @@ O nome da pasta, o `name` no `plugin.json` e a entrada no `marketplace.json` dev
    {
      "extraKnownMarketplaces": {
        "sismais-local": {
-         "source": { "source": "directory", "path": "/caminho/absoluto/para/sismais-ai-plugins" }
+         "source": { "source": "directory", "path": "/caminho/absoluto/para/sismais-ai-plugins-public" }
        }
      },
      "enabledPlugins": {
@@ -93,4 +93,4 @@ O nome da pasta, o `name` no `plugin.json` e a entrada no `marketplace.json` dev
 
 ## Onde tirar dúvidas
 
-Abra uma issue: [github.com/sismais/sismais-ai-plugins/issues](https://github.com/sismais/sismais-ai-plugins/issues)
+Abra uma issue: [github.com/sismais/sismais-ai-plugins-public/issues](https://github.com/sismais/sismais-ai-plugins-public/issues)

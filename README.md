@@ -9,16 +9,16 @@ Marketplace público de plugins de IA da Sismais para [Claude Code](https://docs
 ### Linux / Mac
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/sismais/sismais-ai-plugins/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/sismais/sismais-ai-plugins-public/main/scripts/install.sh | bash
 ```
 
 ### Windows (PowerShell)
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/sismais/sismais-ai-plugins/main/scripts/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/sismais/sismais-ai-plugins-public/main/scripts/install.ps1 | iex
 ```
 
-> Se o PowerShell bloquear: `powershell -ExecutionPolicy Bypass -Command "iwr -useb https://raw.githubusercontent.com/sismais/sismais-ai-plugins/main/scripts/install.ps1 | iex"`.
+> Se o PowerShell bloquear: `powershell -ExecutionPolicy Bypass -Command "iwr -useb https://raw.githubusercontent.com/sismais/sismais-ai-plugins-public/main/scripts/install.ps1 | iex"`.
 
 Na **primeira execução** do Claude Code após o instalador, o cliente pedirá confirmação para confiar no marketplace `sismais` — aceite. As configurações são lidas a cada inicialização do Claude Code; nenhum reinício adicional é necessário.
 
@@ -31,7 +31,7 @@ Na **primeira execução** do Claude Code após o instalador, o cliente pedirá 
    {
      "extraKnownMarketplaces": {
        "sismais": {
-         "source": { "source": "github", "repo": "sismais/sismais-ai-plugins" }
+         "source": { "source": "github", "repo": "sismais/sismais-ai-plugins-public" }
        }
      },
      "enabledPlugins": {
@@ -59,7 +59,7 @@ A skill `hello-sismais` deve responder confirmando que o marketplace está ativo
 
 ## Para o time Sismais (acesso interno)
 
-Há um marketplace privado paralelo com plugins internos da Sismais. **Em breve** — o repo `sismais/sismais-ai-plugins-internal` ainda não está disponível. Quando estiver, este README receberá as instruções específicas (autenticação via `gh auth` ou token GitHub).
+Há um marketplace privado paralelo com plugins internos da Sismais. **Em breve** — o repo `sismais/sismais-ai-plugins-private` ainda não está disponível. Quando estiver, este README receberá as instruções específicas (autenticação via `gh auth` ou token GitHub).
 
 <a id="interno"></a>
 
@@ -73,4 +73,4 @@ Veja [CONTRIBUTING.md](CONTRIBUTING.md) para criar e submeter um novo plugin.
 
 ## Contato
 
-Issues e dúvidas: [github.com/sismais/sismais-ai-plugins/issues](https://github.com/sismais/sismais-ai-plugins/issues)
+Issues e dúvidas: [github.com/sismais/sismais-ai-plugins-public/issues](https://github.com/sismais/sismais-ai-plugins-public/issues)
