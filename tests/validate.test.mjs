@@ -43,6 +43,14 @@ test('skill without frontmatter is detected', () => {
   assert.ok(result.errors.some(e => e.includes('frontmatter YAML ausente')));
 });
 
+test('command with the same name as a skill is detected', () => {
+  const result = validate(fixture('command-shadows-skill'));
+  assert.equal(result.ok, false);
+  const shadow = result.errors.filter(e => e.includes('sombreia a skill'));
+  assert.equal(shadow.length, 1, 'só o homônimo acusa — comando de nome próprio convive');
+  assert.ok(shadow[0].includes('commands/foo.md'));
+});
+
 test('forbidden .svn folder is detected', () => {
   const result = validate(fixture('has-svn'));
   assert.equal(result.ok, false);

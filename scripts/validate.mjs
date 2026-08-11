@@ -89,6 +89,7 @@ export function validate(repoRoot) {
     }
 
     // 4. Skills frontmatter
+    const invocableNames = new Set();
     const skillsDir = path.join(pluginDir, 'skills');
     if (existsSync(skillsDir)) {
       for (const skillName of readdirSync(skillsDir)) {
@@ -102,11 +103,29 @@ export function validate(repoRoot) {
         for (const f of ['name', 'description']) {
           if (!fm[f]) push(`${path.relative(repoRoot, skillMd)}: frontmatter sem "${f}"`);
         }
+        invocableNames.add(fm.name || skillName);
+      }
+    }
+
+    // 5. Comando e skill compartilham o namespace <plugin>:<nome>. Homônimos não convivem:
+    //    o comando ganha e a skill fica inalcançável pelo Skill tool — silenciosamente.
+    const commandsDir = path.join(pluginDir, 'commands');
+    if (existsSync(commandsDir)) {
+      for (const entry of walk(commandsDir)) {
+        if (entry.type !== 'file' || !entry.name.endsWith('.md')) continue;
+        const cmdName = entry.name.slice(0, -3);
+        if (invocableNames.has(cmdName)) {
+          push(
+            `${p.source}: comando "commands/${cmdName}.md" tem o mesmo nome da skill ` +
+            `"skills/${cmdName}/" — o comando sombreia a skill e ela nunca carrega. ` +
+            `Renomeie o comando ou apague-o (a skill já é invocável como /${p.name}:${cmdName}).`,
+          );
+        }
       }
     }
   }
 
-  // 5. No .svn anywhere under plugins/
+  // 6. No .svn anywhere under plugins/
   const pluginsRoot = path.join(repoRoot, 'plugins');
   if (existsSync(pluginsRoot)) {
     for (const entry of walk(pluginsRoot)) {
