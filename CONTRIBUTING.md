@@ -8,6 +8,17 @@ Obrigado pelo interesse. Este guia explica como adicionar um plugin ao marketpla
 - Claude Code instalado, para testar o plugin
 - Git
 
+## A memória de usuário não carrega neste repo
+
+O `.claude/settings.json` daqui traz `claudeMdExcludes` mirando o `~/.claude/CLAUDE.md`: abrir
+este repositório no Claude Code **não** carrega o CLAUDE.md pessoal do dev, de propósito. Plugin
+se testa em contexto limpo — instrução global no meio do caminho mascara se a skill realmente
+dispara sozinha pelo `description`.
+
+Os padrões (`**/Users/*/.claude/CLAUDE.md` e `**/home/*/.claude/CLAUDE.md`) miram só o home do
+dev, em Windows, Linux e Mac; o `CLAUDE.md` do projeto continua carregando normalmente. Para
+preferências pessoais que precisem valer aqui, use `~/.claude/rules/`, que a chave não alcança.
+
 ## Estrutura de um plugin
 
 Cada plugin é uma pasta dentro de `plugins/`:
