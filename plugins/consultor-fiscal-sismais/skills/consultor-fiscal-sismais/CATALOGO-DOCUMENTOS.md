@@ -14,12 +14,14 @@ Pasta: `doc_sources/notas_tecnicas/`
 
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
-| `NT_2025.002_v1.34.pdf` | NT 2025.002 v1.34 | 04/12/2025 | Adequação dos leiautes NF-e/NFC-e para Reforma Tributária. Inclui campos para IBS, CBS, IS, alíquotas, base de cálculo por item, devoluções e regimes especiais. Substitui RT NT 2024.002. **Tags:** IBS, CBS, IS, Reforma Tributária, alíquota, base de cálculo, devolução, regime especial, cClassTrib |
+| `NT_2025.002_v1.51.pdf` | NT 2025.002 v1.51 | 04/08/2026 | Adequação dos leiautes NF-e/NFC-e para Reforma Tributária. Inclui campos para IBS, CBS, IS, alíquotas, base de cálculo por item, devoluções e regimes especiais. Substitui RT NT 2024.002. **Tags:** IBS, CBS, IS, Reforma Tributária, alíquota, base de cálculo, devolução, regime especial, cClassTrib |
+| `NT_2026.006_v1.00.pdf` | NT 2026.006 v1.00 | 25/08/2026 | Especificação técnica para **vinculação entre a NF-e e a transação financeira sujeita ao split payment**. **Tags:** split payment, transação de pagamento, RTC, IBS, CBS, meio de pagamento |
 
 ### Regras de Validação
 
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
+| `NT_2026.007_v1.00.pdf` | NT 2026.007 v1.00 | 04/08/2026 | Regras de validação novas e alteradas para verificação de cadastro na **Lista Centralizada de Contribuintes da RFB (LCC-RFB)** e no **Cadastro Centralizado de Contribuintes (CCC)**. **Tags:** LCC-RFB, CCC, cadastro, regra de validação, contribuinte |
 | `NT_2019.001_v1.70.pdf` | NT 2019.001 v1.70 | 18/08/2025 | Criação e atualização de regras de validação (RVs). Principal NT de regras genéricas – cobre benefícios fiscais (cBenef), CST, CFOP, entre outros. Atualizada frequentemente. **Tags:** cBenef, CST, CFOP, CSOSN, vICMSDeson, motDesICMS, cCredPresumido, gCred, cBenefRBC, modBCST, pMVAST, Suframa, B03-10, I05f, I05g-10, I05h-10, I08-160/170/171, N07-10, N12-84/85/86/88/90/94/97/98, N14a-10/20, N18-10/20, N28-20, W03-20, 1C03-10, 5E17 |
 | `NT_2021.004_v1.35.pdf` | NT 2021.004 v1.35 | 01/11/2022 | Regras de validação da NF-e/NFC-e. Criação de campos e RVs complementares à 2019.001. **Tags:** medicamento, veículos, transporte, ISSQN, infAdic, I08-140, K01-10, J19/J20, U06-10, X03-30, X04, Z02/Z13, 3BA02-10, 5AF15/5BF15 |
 | `NT_2020.006_v1.31.pdf` | NT 2020.006 v1.31 | 26/09/2022 | Regras envolvendo **intermediador/agenciador** de transação comercial (marketplaces). Grupo YA da NF-e. |
@@ -31,7 +33,7 @@ Pasta: `doc_sources/notas_tecnicas/`
 |---------|-----------|------------|-----------|
 | `NT_2018.005_v1.52.pdf` | NT 2018.005 v1.52 | 10/07/2025 | Alteração de leiaute da NF-e/NFC-e. Inclui novos campos e alterações estruturais no XML. **Tags:** leiaute, campos, XML, estrutura |
 | `NT_2022.003_v1.11.pdf` | NT 2022.003 v1.11 | 25/01/2023 | Novos campos e regras de validação para atendimento de demandas de contribuintes. |
-| `NT_2024.003_v1.08.pdf` | NT 2024.003 v1.08 | 24/10/2025 | Campos para informações sobre trânsito de produtos animais vivos, vegetais e florestais. |
+| `NT_2024.003_v1.10.pdf` | NT 2024.003 v1.10 | 11/05/2026 | Campos para informações sobre trânsito de produtos animais vivos, vegetais e florestais. |
 | `NT_2024.001_v1.20.pdf` | NT 2024.001 v1.20 | 29/08/2024 | Campos e regras para emissão de NF-e/NFC-e com **CRT=4 (MEI)**. Elimina denegação para NF-e modelo 55. **Tags:** CRT, MEI, NCM, GTIN, CSOSN, CFOP, denegação, I03-30, I05-10, I08-140/150, I12-60, N11-10, N12-20, N12a-10/40/44/70/80/81/90/91, NA01-20, 7C21-10, 1C17-38/40/50, 5E17-40/60 |
 
 ### Tributação Monofásica (Combustíveis)
@@ -52,7 +54,7 @@ Pasta: `doc_sources/notas_tecnicas/`
 
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
-| `NT_2022.002_v1.30.pdf` | NT 2022.002 v1.30 | 02/03/2026 | Tabela de classificação tributária (cClassTrib), indicadores de CST e crédito presumido. Regras de equiparação à exportação. **Tags:** cClassTrib, CST, crédito presumido, exportação, equiparação |
+| `NT_2022.002_v1.30a.pdf` | NT 2022.002 v1.30a | 26/03/2026 | Tabela de classificação tributária (cClassTrib), indicadores de CST e crédito presumido. Regras de equiparação à exportação. **Tags:** cClassTrib, CST, crédito presumido, exportação, equiparação |
 
 ### ICMS Interestadual (DIFAL)
 
@@ -65,13 +67,13 @@ Pasta: `doc_sources/notas_tecnicas/`
 
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
-| `NT_2020.001_v1.50.pdf` | NT 2020.001 v1.50 | 06/03/2024 | Serviço de manifestação do destinatário. Prazos, regras de rejeição, uso por PF. Ajuste SINIEF 44/20. |
+| `NT_2020.001_v1.60.pdf` | NT 2020.001 v1.60 | 23/04/2026 | Serviço de manifestação do destinatário. Prazos, regras de rejeição, uso por PF. Ajuste SINIEF 44/20. |
 
 ### Distribuição de DF-e
 
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
-| `NT_2014.002_v1.30.pdf` | NT 2014.002 v1.30 | 09/02/2026 | Web Service de distribuição de documentos fiscais eletrônicos (NFeDistribuicaoDFe). Consulta por NSU, chave, CNPJ. |
+| `NT_2014.002_v1.40.pdf` | NT 2014.002 v1.40 | 03/07/2026 | Web Service de distribuição de documentos fiscais eletrônicos (NFeDistribuicaoDFe). Consulta por NSU, chave, CNPJ. |
 
 ### Eventos da NF-e
 
@@ -87,26 +89,35 @@ Pasta: `doc_sources/notas_tecnicas/`
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
 | `NT_2025.001_v1.03.pdf` | NT 2025.001 v1.03 | 29/09/2025 | NFC-e: QR Code v3. NF-e: resposta síncrona obrigatória para lote com 1 NF-e. |
+| `NT_2026.002_v1.10a.pdf` | NT 2026.002 v1.10a | 25/08/2026 | Operações de vendas presenciais e não presenciais com impressão do **DANFE Simplificado Tipo 2**. **Tags:** DANFE Simplificado Tipo 2, venda presencial, venda não presencial |
+| `NT_2026.003_v1.00.pdf` | NT 2026.003 v1.00 | 25/05/2026 | **DANFE Simplificado Tipo 2** — especificação. **Tags:** DANFE Simplificado Tipo 2, impressão, documento auxiliar |
 
 ### CNPJ Alfanumérico
 
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
 | `NTC_2025.001.pdf` | NT Conjunta 2025.001 | 08/05/2025 | Orientações sobre implementação do CNPJ alfanumérico nos DFe. |
+| `NT_2026.004_v1.01.pdf` | NT 2026.004 v1.01 | 08/06/2026 | Atualização do **schema** da NF-e/NFC-e para adequação ao CNPJ alfanumérico. **Tags:** CNPJ alfanumérico, schema, XSD, leiaute |
+
+### Provedor de Assinatura e Autorização (PAA)
+
+| Arquivo | Documento | Publicação | Descrição |
+|---------|-----------|------------|-----------|
+| `NT_2026.001_v1.02b.pdf` | NT 2026.001 v1.02b | 31/07/2026 | Especifica o **Provedor de Assinatura e Autorização (PAA)** no âmbito da NF-e. **Tags:** PAA, assinatura, autorização, provedor |
 
 ### NFC-e Específicas
 
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
 | `NT_2023.002_v1.01.pdf` | NT 2023.002 v1.01 | 18/11/2025 | Emissão de NFC-e por **Produtor Rural PF**. Elimina denegação e lote na NFC-e. |
-| `NT_2023.003_v1.20.pdf` | NT 2023.003 v1.20 | 08/10/2024 | Inclusão e alteração de campos e RVs. Regras de CFOP na NFC-e. **Tags:** CFOP, NFC-e, CST, CSOSN, 5.949, RS, CE, SP, gorjeta, N12-40, N12a-40, I08-150, N12-70 |
+| `NT_2023.003_v1.30.pdf` | NT 2023.003 v1.30 | 29/07/2026 | Inclusão e alteração de campos e RVs. Regras de CFOP na NFC-e. **Tags:** CFOP, NFC-e, CST, CSOSN, 5.949, RS, CE, SP, gorjeta, N12-40, N12a-40, I08-150, N12-70 |
 | `NT_2023.004_v1.20.pdf` | NT 2023.004 v1.20 | 07/10/2024 | Inclusão de campos e RVs. Informações de pagamento, ICMS desonerado (indDeduzDeson), importação. **Tags:** pagamento, YA, indDeduzDeson, vICMSDeson, CNPJPag, UFPag, CNPJReceb, idTermPag, troco, YA09-20, CST 20/30/40/41/50/70/90 |
 
 ### Contingência e EPEC
 
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
-| `NT_2014.001_v1.30.pdf` | NT 2014.001 v1.30 | 21/06/2022 | EPEC – Evento Prévio de Emissão em Contingência. Consulta pública do EPEC. |
+| `NT_2014.001_v1.41.pdf` | NT 2014.001 v1.41 | 04/08/2026 | EPEC – Evento Prévio de Emissão em Contingência. Consulta pública do EPEC. |
 | `NT_2018.004_v1.00.pdf` | NT 2018.004 v1.00 | 21/12/2018 | Cancelamento por substituição da NFC-e. |
 | `NT_2018.001_v1.10.pdf` | NT 2018.001 v1.10 | 27/02/2020 | Chave natural da NFC-e, regras de validação, manifestação do destinatário. Emitente PF (CPF) com IE. |
 
@@ -129,7 +140,7 @@ Pasta: `doc_sources/notas_tecnicas/`
 | Arquivo | Documento | Publicação | Descrição |
 |---------|-----------|------------|-----------|
 | `NT_2014.003_v1.02.pdf` | NT NFC-e 2014.003 v1.02 | 12/01/2015 | EPEC da NFC-e – Evento Prévio de Emissão em Contingência. |
-| `NT_2014.004.pdf` | NT 2014.004 v1.10 | 11/08/2014 | Validação NCM, novos códigos de País, fuso horário do Evento. **Tags:** NCM, I05-10, I05-20, I05-24, I05-40, NCM 00000000, NCM 00, serviço, País |
+| `NT_2014.004_v1.10.pdf` | NT 2014.004 v1.10 | 11/08/2014 | Validação NCM, novos códigos de País, fuso horário do Evento. **Tags:** NCM, I05-10, I05-20, I05-24, I05-40, NCM 00000000, NCM 00, serviço, País |
 
 ### NTs Antigas (ainda vigentes)
 
@@ -250,11 +261,13 @@ Pasta: `doc_sources/esquemas_xml/NFe_NFCe/` (~201 arquivos XSD)
 
 ## Status da Base
 
-> **Última verificação:** 06/03/2026
-> **Notas Técnicas vigentes:** 96 documentos em `doc_sources/notas_tecnicas/` (todos com nome padronizado incluindo versão)
-> **Histórico:** 2 documentos em `doc_sources/historico/` (RT_NT_2024.002_v1.10, NT_2025.001_v1.02)
-> **Informes Técnicos:** pendente download
-> **Manuais (MOC, Anexos):** pendente download
-> **Próxima verificação agendada:** semanal (NTs)
+> **Última verificação:** 08/09/2026 — conferida contra a lista de *Documentos vigentes* do Portal da NF-e
+> **Notas Técnicas:** 102 documentos em `doc_sources/notas_tecnicas/` — **101 de 101 séries vigentes, todas na versão do portal**
+> **Histórico:** 13 documentos em `doc_sources/historico/` (versões substituídas — não usar para respostas)
+> **Esquemas XML:** 201 arquivos XSD em `doc_sources/esquemas_xml/NFe_NFCe/`
+> **Manuais:** 19 PDFs em `doc_sources/manuais/` — **presentes, mas com nomes fora da convenção** (o catálogo aponta `MOC_v7.0.pdf`, o arquivo em disco tem outro nome; pendente renomear)
+> **Informes Técnicos:** pasta `informes_tecnicos/` **não existe** — pendente download
+> **Tabelas auxiliares:** pasta `tabelas/` **não existe** — NCM, CFOP, CST, CSOSN, cBenef e cClassTrib pendentes de download
+> **Próxima verificação sugerida:** semanal (NTs)
 
 Para atualizar, siga o processo em [GUIA-ATUALIZACAO.md](GUIA-ATUALIZACAO.md).
